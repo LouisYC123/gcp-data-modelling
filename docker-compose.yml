@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  dbt_gcp:
+    container_name: dbt_gcp
+    build: .
+    image: dbt-gcp
+    env_file:
+      - .env
+    volumes:
+      - ./src:/home/src
