@@ -9,3 +9,6 @@ services:
       - .env
     volumes:
       - ./src:/home/src
+
+volumes:
+  src:
