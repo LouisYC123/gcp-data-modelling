@@ -1,3 +1,2 @@
-python-dotenv
-ipykernel
 dbt-bigquery
+google-cloud-bigquery

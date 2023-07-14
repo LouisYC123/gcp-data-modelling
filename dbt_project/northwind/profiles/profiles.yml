@@ -1,0 +1,12 @@
+northwind:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: postgres
+      password: postgres
+      port: 5432
+      dbname: dl_northwind 
+      schema: dl_northwind
+      threads: 1

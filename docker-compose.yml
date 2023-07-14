@@ -8,7 +8,4 @@ services:
     env_file:
       - .env
     volumes:
-      - ./src:/home/src
-
-volumes:
-  src:
+      - ./app:/home/src

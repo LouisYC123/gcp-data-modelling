@@ -1,5 +1,24 @@
 # Data Modelling in GCP
 
+- create virtual env
+```python3 -m venv dbt-env ```  
+y
+- navigate to new env dir and activate env
+```source bin/activate ```
+
+- install dbt for bigquery
+``` pip install \
+dbt-core \
+dbt-postgres \
+dbt-bigquery 
+```
+
+- start a new dbt project
+``` dbt init <project_name> ```
+
+- check with dbt debug
+``` dbt debug ```
+
 - To install gcloud cli in container (used to connect dbt with BigQuery):  
 ```
 apt-get update
