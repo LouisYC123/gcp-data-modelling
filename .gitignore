@@ -166,3 +166,4 @@ dbt_packages/
 logs/
 ../dbt-env/
 ../logs/
+gcp_keys/

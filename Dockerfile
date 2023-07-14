@@ -1,12 +1,23 @@
-FROM python:3.10
+# Use an official Python runtime as the base image
+FROM python:3.9
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends
+# Set the working directory in the container
+WORKDIR /app
 
-COPY requirements.txt /home
-WORKDIR /home
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+# Copy the requirements file to the container
+COPY requirements.txt .
+
+# Install the required packages
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the project files to the container
+COPY . .
+
+# Set the environment variables
+# ENV GOOGLE_APPLICATION_CREDENTIALS=/app/path/to/your/credentials.json
+ENV GOOGLE_APPLICATION_CREDENTIALS=/app/gcp_credentials.json
 
 
+# Run your Data Build Tool command
+# CMD ["dbt", "run"]
 CMD ["tail", "-f", "/dev/null"]
